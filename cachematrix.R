@@ -8,13 +8,13 @@ makeCacheMatrix <- function(x = matrix()){ ## Creating the
   matinv <- NULL ## Assign initial vector for the matrix
   ## matinv as empty matrix with allocated memory space.
   set <- function(y = matrix()) {## a function to make the calling 
-    ##  of the free varible vector 'y applied from the parent environment
-    ## i.e the glopal environment (cached memory).
+    ##  of the free variable vector 'y applied from the parent environment
+    ## i.e the global environment (cached memory).
     ## Also it used to change the cached matrix.
     x <<- y  ## Assigning the argument x to the calling environment
     ## and assign the free variable matrix vector to the entered matrix 'x'
     matinv <<- NULL ## Re-initialize the initial vector of
-    ## the cached invers matrix.
+    ## the cached inverse matrix.
   }
   get <- function() x  ## Get the victor of the  matrix in the cache
   setmatrix<-function(solve)  matinv <<- solve ## Set the cached matrix
